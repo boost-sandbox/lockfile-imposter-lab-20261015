@@ -1,0 +1,11 @@
+name: locked-upstream
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: boost-sandbox/lockfile-preview-actions-20261015/helper@adfe176410cf2cb781876304870a6acd0a6508ce
+      - run: echo RESEARCH_PROBE_COMPLETE
